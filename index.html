@@ -1,16 +1,104 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
+<html lang = "uk">
+<head>
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+	<meta name = "viewport" content="width=device-width, initial-scale=1">
+    <title>Кошик покупок <3</title>
+	<link rel="stylesheet" href="main.css">
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+<header><h1>Кошик покупок</h1></header>
+<main>
+    <div class="content">
+        <section class="left_col">
+            <form action="/search" method="GET">
+        <label for="q">Введіть назву товару -></label>
+        <input type="text" id="q" name="q" placeholder="Назва товару. Наприклад: Яблука" required>
+        <button type="submit">Додати</button>
+    </form>
+    <ul class="products">
+        <li class="product product_is_bought">
+            <span class="product_name">Помідори</span>
+            <div class="amount_for_prod">
+                <span class="amount">2</span>
+                <select name="measure" aria-label="Одиниця виміру">
+                    <option value="kg">кг</option>
+                    <option value="piece">шт</option>
+                    <option value="packaging">уп</option>
+                    <option value="liter">л</option>
+                </select>
+            </div>
+            <div class="statuses">
+                <button class="status" data-tooltip="Змінити статус">Не куплено</button>
+            </div>
+        </li>
+        <li class="product">
+            <span class="product_name">Печиво</span>
+            <div class="amount_for_prod">
+                <span class="amount">2</span>
+                <button class="plus" data-tooltip="Збільшити">+</button>
+                <button class="minus" data-tooltip="Зменшити">-</button>
+                <select name="measure" aria-label="Одиниця виміру">
+                    <option value="kg">кг</option>
+                    <option value="piece">шт</option>
+                    <option value="packaging">уп</option>
+                    <option value="liter">л</option>
+                </select>
+            </div>
+            <div class="statuses">
+                <button class="status" data-tooltip="Змінити статус">Куплено</button>
+                <button class="delete" data-tooltip="Видалити зі списку">×</button>
+            </div>
+        </li>
+        <li class="product">
+            <span class="product_name">Сир</span>
+            <div class="amount_for_prod">
+                <span class="amount">1</span>
+                <button class="plus" data-tooltip="Збільшити">+</button>
+                <button class="minus" data-tooltip="Зменшити" disabled>-</button>
+                <select name="measure" aria-label="Одиниця виміру">
+                    <option value="kg">кг</option>
+                    <option value="piece">шт</option>
+                    <option value="packaging">уп</option>
+                    <option value="liter">л</option>
+                </select>
+            </div>
+            <div class="statuses">
+                <button class="status" data-tooltip="Змінити статус">Куплено</button>
+                <button class="delete" data-tooltip="Видалити зі списку">×</button>
+            </div>
+        </li>
+    </ul>
+        </section>
+        <aside class="right_col">
+            <div class="statement">
+                <h2>Залишилося</h2>
+                <div class="items">
+                    <span class="item">
+                        <span class="item_name">Печиво</span>
+                        <span class="item_count">2</span>
+                    </span>
+                    <span class="item">
+                        <span class="item_name">Сир</span>
+                        <span class="item_count">1</span>
+                    </span>
+                </div>
+            </div>
+            <div class="statement">
+                <h2>Куплено</h2>
+                <div class="items">
+                    <span class="item is-bought">
+                        <span class="item_name">Помідори</span>
+                        <span class="item_count">2</span>
+                    </span>
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>
+<div class="author-badge">
+    <div class="title">Кошик покупок</div>
+    <div class="author">Корж Софія</div>
+</div>
 </body>
 </html>
