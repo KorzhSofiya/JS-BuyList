@@ -268,7 +268,7 @@ button.delete:hover {
 }
 .author{
 	padding: 0 20px 15px 20px;
-	font-sixe: 14px;
+	font-size: 14px;
 }
 .author-badge:hover{
 	transform: translateY(0);
